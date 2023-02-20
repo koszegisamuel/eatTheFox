@@ -126,5 +126,6 @@ export default class Enemy {
 
         this.image = this.normalGhost;
 
+        
     }
 }
