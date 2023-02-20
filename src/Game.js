@@ -43,21 +43,16 @@ function pause() {
 
 function drawGameEnd() {
     if (gameOver || gameWin) {
-        let text = '  You win';
+        let text = '     You won!';
         if (gameOver) {
-            text = 'Game Over'
+            text = "   You lost! Try Again!"
         }
 
-        ctx.fillStyle = "black";
-        ctx.fillRect(0, canvas.height / 3.2, canvas.width, 80)
+        ctx.fillStyle = "gray";
+        ctx.fillRect(0, canvas.height / 2.8, canvas.width, 80)
 
-        ctx.font = "80px comic sans"
-        const gradient = ctx.createLinearGradient(0,0,canvas.width, 0)
-        gradient.addColorStop("0", "magenta");
-        gradient.addColorStop("0.5", "blue");
-        gradient.addColorStop("1.0", "red");
-
-        ctx.fillStyle = gradient;
+        ctx.font = "70px comic sans"
+        ctx.fillStyle = "white";
         ctx.fillText(text, 10, canvas.height / 2);
     }
 
